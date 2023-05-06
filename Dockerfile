@@ -4,6 +4,6 @@ RUN apt update
 
 WORKDIR /usr/app/src/
 
-COPY print.py ./
+COPY python.py ./
 
-CMD ["python3", "./print.py"]
+CMD ["python3", "./python.py"]
