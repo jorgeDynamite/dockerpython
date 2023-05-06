@@ -1,7 +1,6 @@
 FROM ubuntu:latest 
 
-RUN yum update
-RUN yum install python3 -y 
+RUN apt update
 
 WORKDIR /usr/app/src/
 
