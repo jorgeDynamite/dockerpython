@@ -1,5 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.9
 ADD main.py .
-RUN apt-get install --reinstall python3-pip
-RUN pip install pillow
+RUN pip3 install request
 CMD ["python", "./main.py"]
