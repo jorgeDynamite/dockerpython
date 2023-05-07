@@ -15,6 +15,8 @@ while True:
     print("Connection from", addr)
     client.send("You are connected\n".encode())
     client.send(f"{data['data'][:, 0]}a\n".encode())
+    print("1")
     time.sleep(2)
     client.send("Dissconnect\n".encode())
+    print("2")
     client.close()
