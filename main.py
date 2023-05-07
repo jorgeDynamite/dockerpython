@@ -5,9 +5,9 @@ from PIL import Image
 import numpy as np
 from scipy.spatial import distance
 import requests
-import joblib
 
-model = joblib.load(open("model.pkl", "rb"))
+
+model = tf.keras.models.load_model("model1")
 
 IMAGE_SHAPE = (224, 224)
 
