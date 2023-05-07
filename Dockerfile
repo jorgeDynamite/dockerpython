@@ -1,5 +1,5 @@
-FROM python:3.9
+FROM python:3.10
 ADD main.py .
-RUN pip install scipy numpy pillow requests
-RUN pip install tensorflow==2.5.0 --no-cache-dir
+RUN pip install scipy pillow requests
+RUN pip install tensorflow --no-cache-dir
 CMD ["python", "./main.py"]
