@@ -3,8 +3,6 @@ import socket
 import tensorflow as tf
 
 
-
-
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(("0.0.0.0", 9999))
 
@@ -20,7 +18,6 @@ while True:
     client.send("Dissconnect\n".encode())
     print("2")
     client.close()
-"""
 
 
 """

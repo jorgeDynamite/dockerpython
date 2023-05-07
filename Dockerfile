@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.9-slim
 ADD main.py .
-RUN pip -m install tensorflow
+RUN pip install tensorflow tensorflow-io
 CMD ["python", "./main.py"]
