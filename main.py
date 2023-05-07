@@ -5,7 +5,7 @@ from PIL import Image
 import numpy as np
 from scipy.spatial import distance
 import requests
-import pickle4 as pickle
+import pickle
 
 model = pickle.load(open("model.pkl", "rb"))
 
