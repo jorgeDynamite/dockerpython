@@ -1,6 +1,6 @@
 import time
 import socket
-import tensorflow as tf
+import requests
 
 
 
@@ -14,7 +14,7 @@ while True:
     client, addr = server.accept()
     print("Connection from", addr)
     client.send("You are connected\n".encode())
-    client.send(f"{tf.__version__}".encode())
+    client.send(f"{requests.__version__}".encode())
     print("1")
     time.sleep(2)
     client.send("Dissconnect\n".encode())
