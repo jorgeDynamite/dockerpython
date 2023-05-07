@@ -1,24 +1,13 @@
 import time
 import socket
 import tensorflow as tf
-import tensorflow_hub as hub
 from PIL import Image
 import numpy as np
 from scipy.spatial import distance
 import requests
+import pickle
 
-model_url = "https://tfhub.dev/tensorflow/efficientnet/lite0/feature-vector/2"
-
-layer = hub.KerasLayer(model_url)
-
-# tf.keras.saving.register_keras_serializable('KerasLayer')(hub.KerasLayer)
-model = tf.keras.Sequential([layer])
-
-# Register KerasLayer object before saving the model
-# pickle.dumps(tf.keras.saving.register_keras_serializable('KerasLayer')(hub.KerasLayer))
-# pickle.dump(model, open("model.pkl", "wb"))
-
-# Load the model from the pickle file
+model = pickle.load(open("model.pkl", "rb"))
 
 IMAGE_SHAPE = (224, 224)
 
