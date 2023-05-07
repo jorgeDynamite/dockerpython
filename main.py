@@ -5,9 +5,9 @@ from PIL import Image
 import numpy as np
 from scipy.spatial import distance
 import requests
-import pickle
+import joblib
 
-model = pickle.load(open("model.pkl", "rb"))
+model = joblib.load(open("model.pkl", "rb"))
 
 IMAGE_SHAPE = (224, 224)
 
