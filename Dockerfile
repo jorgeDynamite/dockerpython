@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update
 
-RUN apt install python3 -y
+RUN apt-get install -y python3 
 
 WORKDIR /usr/app/src/
 
